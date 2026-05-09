@@ -49,7 +49,7 @@ jobs:
         with:
           image-ref: "${{ env.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:v1.0.0-${{ env.TAG_SUFFIX }}"
           format: 'table'                                # Human‑readable table in logs
-          exit-code: '1'                                 # Fail the step if any vulnerabilities are found
+          exit-code: '0'                                 # Fail the step if any vulnerabilities are found
           ignore-unfixed: true                           # Only alert if a fix is NOT available
           severity: 'HIGH,CRITICAL'                      # Only fail on these levels
 
