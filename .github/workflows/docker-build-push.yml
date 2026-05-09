@@ -5,9 +5,9 @@ name: Build, Scan, Push and Verify Docker Image
 # This workflow runs on pushes to the main branch and on pull requests targeting main.
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 # Environment variables that are available to all jobs below.
 env:
