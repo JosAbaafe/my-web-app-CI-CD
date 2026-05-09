@@ -3,8 +3,7 @@
 FROM python:3.11-slim
 
 #RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
-RUN pip install --no-cache-dir --upgrade jaraco.context>=6.1.0 wheel>=0.46.2
+
 
 # LABEL instructions: key=value metadata for documentation and tooling.
 LABEL maintainer="billmanuel9@gmail.com.com"
@@ -27,6 +26,11 @@ COPY requirements.txt .
 # --no-cache-dir: don’t store downloaded packages (reduces image size).
 RUN pip install --no-cache-dir -r requirements.txt
 
+
+# PATCH: Manually upgrade libraries with HIGH vulnerabilities found by Trivy
+RUN pip install --no-cache-dir --upgrade \
+    "jaraco.context>=6.1.0" \
+    "wheel>=0.46.2"
 # Copy the rest of the application code into the image.
 # The '.' means the whole build context (current directory).
 COPY . .
