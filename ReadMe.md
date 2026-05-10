@@ -34,19 +34,19 @@ Trying GitHub Actions
 
 3. *Visit http://localhost:5000 and http://localhost:5000/health in your browser.*
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/3.png)  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/3.png)  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/4.png)
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/4.png)
 
 **Stop and remove the container when finished**  
   
 4. *docker rm -f webapp-test*  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/5.png)  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/5.png)  
 
 5. * docker login -u your-dockerhub-username *
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/6.png)  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/6.png)  
 
 6. *docker tag my-web-app your-dockerhub-username/my-web-app:v1.0.0-john*
 
@@ -68,15 +68,15 @@ Trying GitHub Actions
 
 **Phase 2 – Automate with a DevSecOps Pipeline (GitHub Actions)**  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/7.png)  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/7.png)  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/8.png)    
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/8.pngg)    
   
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/9.png)  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/9.png)  
 
 **Clean Up**  
   
 10. *Remove all images and containers created during the lab:*  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/e106b2f8626dc564720b9f676075d6813a64e600/images/10.png)
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/10.pngg)
   
