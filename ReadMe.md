@@ -80,5 +80,5 @@ Trying GitHub Actions
   
 10. *Remove all images and containers created during the lab:*  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/10.pngg)
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/10.png)
   
