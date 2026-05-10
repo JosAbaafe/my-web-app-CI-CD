@@ -9,6 +9,8 @@ Trying GitHub Actions
 ![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a4d4b9a4f565ac48d839660b8f9c5733a7765abb/images/11.png)  
   
 4. docker ps  
+
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/53e33cf802c300566672b171012d25470e6717bd/images/12.png)  
   
 5. docker logs my-nginx
   
