@@ -6,7 +6,7 @@ Trying GitHub Actions
 
 2. docker run -d -p 8080:80 --name my-nginx nginx:alpine
     
-![image alt]()  
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a4d4b9a4f565ac48d839660b8f9c5733a7765abb/images/11.png)  
   
 4. docker ps  
   
@@ -70,7 +70,7 @@ Trying GitHub Actions
 
 ![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/7.png)  
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/8.pngg)    
+![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/8.png)    
   
 ![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/9.png)  
 
