@@ -139,8 +139,8 @@ The GitHub Actions workflow performs the following:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-github-username/your-repo.git
-cd your-repo
+git clone https://github.com/JosAbaafe/my-web-app-CI-CD.git
+cd cloned-Repo
 ```
 
 ---
@@ -197,7 +197,7 @@ The workflow automatically:
 # Docker Hub Image
 
 ```bash
-docker pull your-dockerhub-username/my-web-app:v1.0.0-yourname
+docker pull emmanuel321/my-web-app:tagname
 ```
 
 ---
@@ -219,7 +219,7 @@ docker run -d -p 5000:5000 my-web-app
 ## Push Image
 
 ```bash
-docker push your-dockerhub-username/my-web-app:v1.0.0-yourname
+docker push emmanuel321/my-web-app:tagname
 ```
 
 ---
