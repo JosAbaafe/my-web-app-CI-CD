@@ -112,20 +112,20 @@ The GitHub Actions workflow performs the following:
 
 ## 4. Running Docker Container
 
-![Docker Run](screenshots/docker-run.png)
+![Docker Run](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/ff185d433f75ab37ec60559b6e981c6c208f6295/images/2.png)
 
 ---
 
 ## 5. Docker Hub Repository
 
-![Docker Hub](screenshots/dockerhub-repository.png)
+![Docker Hub](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/ff185d433f75ab37ec60559b6e981c6c208f6295/images/6.png)
 
 ---
 
 ## 6. GitHub Actions Workflow Success
 
-![GitHub Actions](screenshots/github-actions-success.png)
-
+![GitHub Actions](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/ff185d433f75ab37ec60559b6e981c6c208f6295/images/7.png)
+![GitHub Actions](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/ff185d433f75ab37ec60559b6e981c6c208f6295/images/8.png)
 ---
 
 ## 7. Trivy Vulnerability Scan
