@@ -94,19 +94,19 @@ The GitHub Actions workflow performs the following:
 
 ## 1. Running Flask Application
 
-![Flask App Screenshot](screenshots/flask-homepage.png)
+![Flask App Screenshot](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/0433e40082fffbebd1d9efac7f736d9197326cbd/images/3.png)
 
 ---
 
 ## 2. Health Endpoint Response
 
-![Health Endpoint](screenshots/health-endpoint.png)
+![Health Endpoint](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/0433e40082fffbebd1d9efac7f736d9197326cbd/images/4.png)
 
 ---
 
 ## 3. Docker Image Build
 
-![Docker Build](screenshots/docker-build.png)
+![Docker Build](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/0433e40082fffbebd1d9efac7f736d9197326cbd/images/Screenshot%202026-05-08%20223149.png)
 
 ---
 
