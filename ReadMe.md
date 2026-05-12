@@ -59,7 +59,6 @@ The application includes:
 
 - A homepage endpoint (`/`)
 - A health-check endpoint (`/health`)
-- Environment variable support using `APP_NODE`
 
 ---
 
