@@ -1,84 +1,268 @@
-Trying GitHub Actions  
-  
-1.docker pull nginx:alpine 
-  
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/171f9ac827e05307cff448a5195733b0b5d59867/images/Screenshot%202026-05-08%20221705.png)  
+# Docker, GitHub & DevSecOps Beginner Hands-On Lab
 
-2. docker run -d -p 8080:80 --name my-nginx nginx:alpine
-    
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a4d4b9a4f565ac48d839660b8f9c5733a7765abb/images/11.png)  
-  
-4. docker ps  
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-black?logo=githubactions)
+![Python](https://img.shields.io/badge/Python-3.11-yellow?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-lightgrey?logo=flask)
+![DevSecOps](https://img.shields.io/badge/DevSecOps-Security%20Automation-red)
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/53e33cf802c300566672b171012d25470e6717bd/images/12.png)  
-  
-5. docker logs my-nginx
-  
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/171f9ac827e05307cff448a5195733b0b5d59867/images/Screenshot%202026-05-08%20221901.png)  
+---
 
-7. docker rm -f my-nginx
-  
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/171f9ac827e05307cff448a5195733b0b5d59867/images/Screenshot%202026-05-08%20221933.png)  
+# Overview
 
-8. Open your browser to http://localhost:8080 – you should see the Nginx welcome page.
+This repository contains a beginner-friendly DevSecOps hands-on lab focused on containerization, CI/CD automation, and security integration using Docker, Flask, Docker Hub, GitHub Actions, and Trivy.
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a5caa90e57223df82c6a5c0448e2cef79734fdc4/images/Screenshot%202026-05-08%20221739.png)  
+The project demonstrates how to:
 
-**Phase 1 – Build, Push, Pull & Share Your Own Image**
+- Build and containerize a Flask web application
+- Create a secure Docker image using best practices
+- Push and pull images from Docker Hub
+- Automate CI/CD workflows with GitHub Actions
+- Scan container images for vulnerabilities using Trivy
+- Perform automated smoke testing
+- Apply DevSecOps principles in a practical workflow
 
-**Building & Testing Locally**
-1. *docker build -t my-web-app .*
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a5caa90e57223df82c6a5c0448e2cef79734fdc4/images/Screenshot%202026-05-08%20223149.png)
+---
 
-2. *docker run -d -p 5000:5000 --name webapp-test my-web-app *
+# Technologies Used
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/b40206cb8c43a97901d6833279a947d2d217373c/images/2.png)  
+- Docker
+- Docker Hub
+- Python 3.11
+- Flask
+- Git & GitHub
+- GitHub Actions
+- Trivy Vulnerability Scanner
 
-3. *Visit http://localhost:5000 and http://localhost:5000/health in your browser.*
+---
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/3.png)  
+# Project Structure
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/4.png)
+```bash
+your-project/
+├── app.py
+├── templates/
+│   └── index.html
+├── requirements.txt
+├── Dockerfile
+├── .dockerignore
+└── .github/
+    └── workflows/
+        └── docker-build-push.yml
+```
 
-**Stop and remove the container when finished**  
-  
-4. *docker rm -f webapp-test*  
+---
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/5.png)  
+# Flask Application
 
-5. * docker login -u your-dockerhub-username *
+The application includes:
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/6.png)  
+- A homepage endpoint (`/`)
+- A health-check endpoint (`/health`)
+- Environment variable support using `APP_NODE`
 
-6. *docker tag my-web-app your-dockerhub-username/my-web-app:v1.0.0-john*
+---
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a538e9e48de7056a2932e0c7c672dc0a05ad54af/images/Screenshot%202026-05-08%20231539.png)  
+# Docker Features Implemented
 
-7. *Remove the local image (if it exists – ignore errors).*
+## Secure Dockerfile Practices
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a538e9e48de7056a2932e0c7c672dc0a05ad54af/images/Screenshot%202026-05-08%20231719.png)  
+- Lightweight base image (`python:3.11-slim`)
+- Non-root container user
+- Layer caching optimization
+- Health checks
+- Reduced attack surface
+- `.dockerignore` implementation
 
-8. *Pull the image – downloads all layers from the registry.*
+---
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a538e9e48de7056a2932e0c7c672dc0a05ad54af/images/Screenshot%202026-05-08%20231808.png)  
+# CI/CD Pipeline Features
 
-9. * Run a container from the freshly pulled image, mapping port 5000.*
+The GitHub Actions workflow performs the following:
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/a538e9e48de7056a2932e0c7c672dc0a05ad54af/images/Screenshot%202026-05-08%20231909.png)  
+1. Checks out source code
+2. Logs into Docker Hub securely using GitHub Secrets
+3. Builds the Docker image
+4. Scans the image with Trivy
+5. Pushes images only if scans pass
+6. Runs smoke tests automatically
+7. Cleans up test containers
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/f354a97967c2d3b93e56b4a116c21cbf39eeb7f4/images/Screenshot%202026-05-09%20220913.png)  
+---
 
-**Phase 2 – Automate with a DevSecOps Pipeline (GitHub Actions)**  
+# Screenshots
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/7.png)  
+## 1. Running Flask Application
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/8.png)    
-  
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/9.png)  
+![Flask App Screenshot](screenshots/flask-homepage.png)
 
-**Clean Up**  
-  
-10. *Remove all images and containers created during the lab:*  
+---
 
-![image alt](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/200b700c8251d7a3fde337540210bc117a6dbbc1/images/10.png)
-  
+## 2. Health Endpoint Response
+
+![Health Endpoint](screenshots/health-endpoint.png)
+
+---
+
+## 3. Docker Image Build
+
+![Docker Build](screenshots/docker-build.png)
+
+---
+
+## 4. Running Docker Container
+
+![Docker Run](screenshots/docker-run.png)
+
+---
+
+## 5. Docker Hub Repository
+
+![Docker Hub](screenshots/dockerhub-repository.png)
+
+---
+
+## 6. GitHub Actions Workflow Success
+
+![GitHub Actions](screenshots/github-actions-success.png)
+
+---
+
+## 7. Trivy Vulnerability Scan
+
+![Trivy Scan](screenshots/trivy-scan.png)
+
+---
+
+# Setup Instructions
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-github-username/your-repo.git
+cd your-repo
+```
+
+---
+
+## Build Docker Image
+
+```bash
+docker build -t my-web-app .
+```
+
+---
+
+## Run Docker Container
+
+```bash
+docker run -d -p 5000:5000 --name webapp-test my-web-app
+```
+
+---
+
+## Access Application
+
+Home Page:
+
+```bash
+http://localhost:5000
+```
+
+Health Endpoint:
+
+```bash
+http://localhost:5000/health
+```
+
+---
+
+# GitHub Actions Workflow
+
+Workflow file location:
+
+```bash
+.github/workflows/docker-build-push.yml
+```
+
+The workflow automatically:
+
+- Builds the image
+- Performs vulnerability scanning
+- Pushes secure images to Docker Hub
+- Executes smoke tests
+
+---
+
+# Docker Hub Image
+
+```bash
+docker pull your-dockerhub-username/my-web-app:v1.0.0-yourname
+```
+
+---
+
+# Example Workflow Commands
+
+## Build Image
+
+```bash
+docker build -t my-web-app .
+```
+
+## Run Container
+
+```bash
+docker run -d -p 5000:5000 my-web-app
+```
+
+## Push Image
+
+```bash
+docker push your-dockerhub-username/my-web-app:v1.0.0-yourname
+```
+
+---
+
+# Learning Outcomes
+
+Through this lab, I gained practical experience in:
+
+- Docker containerization
+- Secure Docker image creation
+- CI/CD automation
+- GitHub Actions workflows
+- DevSecOps practices
+- Vulnerability management
+- Container security best practices
+- Image lifecycle management
+
+---
+
+# Future Improvements
+
+Potential enhancements for this project:
+
+- Kubernetes deployment
+- Multi-stage Docker builds
+- Image signing with Cosign
+- SBOM generation
+- Infrastructure as Code integration
+- Automated deployment to cloud platforms
+
+---
+
+# Author
+
+**Your Name**
+
+- GitHub: https://github.com/your-github-username
+- LinkedIn: https://linkedin.com/in/your-linkedin-profile
+
+---
+
+# License
+
+This project is for educational and learning purposes.
+
+Licensed under the MIT License.
