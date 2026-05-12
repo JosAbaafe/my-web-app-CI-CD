@@ -130,7 +130,7 @@ The GitHub Actions workflow performs the following:
 
 ## 7. Trivy Vulnerability Scan
 
-![Trivy Scan](screenshots/trivy-scan.png)
+![Trivy Scan](https://github.com/JosAbaafe/my-web-app-CI-CD/blob/94110dea0cf0cdb62d01fd52c6894b8017e78f67/images/trivy.png)
 
 ---
 
