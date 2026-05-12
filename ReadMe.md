@@ -28,7 +28,7 @@ The project demonstrates how to:
 
 - Docker
 - Docker Hub
-- Python 3.11
+- Python 3.12
 - Flask
 - Git & GitHub
 - GitHub Actions
@@ -66,8 +66,7 @@ The application includes:
 
 ## Secure Dockerfile Practices
 
-- Lightweight base image (`python:3.11-slim`)
-- Non-root container user
+- Lightweight base image (`python:3.12-slim`)
 - Layer caching optimization
 - Health checks
 - Reduced attack surface
@@ -238,30 +237,12 @@ Through this lab, I gained practical experience in:
 
 ---
 
-# Future Improvements
-
-Potential enhancements for this project:
-
-- Kubernetes deployment
-- Multi-stage Docker builds
-- Image signing with Cosign
-- SBOM generation
-- Infrastructure as Code integration
-- Automated deployment to cloud platforms
-
----
-
 # Author
 
-**Your Name**
+**Emmanuel Awonate Abaafe**
 
-- GitHub: https://github.com/your-github-username
-- LinkedIn: https://linkedin.com/in/your-linkedin-profile
+- GitHub: https://github.com/JosAbaafe
+- LinkedIn: www.linkedin.com/in/emmanuel-abaafe-524101177
 
 ---
 
-# License
-
-This project is for educational and learning purposes.
-
-Licensed under the MIT License.
